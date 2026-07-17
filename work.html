@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+      }
+      .page1 {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+      } 
+      .left {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .right {
+      
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        background:linear-gradient(135deg,#2fc39b,#45b6d8);
+      }
+      h1{
+        font-size: 50px;
+         display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content:center;
+      }
+     .icons i{
+        background-color: rgb(155, 151, 151);
+        font-size: 35px;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      .icons .google{
+        background-color: rgb(186, 94, 94);
+      }
+      h5{
+        color: rgb(177, 164, 164);
+        font-size: 20px;
+      }
+      form{
+        
+        height: 40%;
+        width: 70%;
+      }
+      h2{
+        font-size: 60px;
+        color: white;
+      }
+      h3{
+        color: white;
+      }
+      p{
+        font-size: 30px;
+        color: white;
+      }
+      button{
+        background-color: white;
+        color:black;
+        border-radius: 30px;
+        font-size: 10;
+        width: 250px;
+        height: 60px;
+      }
+      input{
+        height: 30px;
+        border-radius: 15px;
+      }
+      .signin{
+background-color:rgb(79, 198, 176);
+        color:white;
+      }
+      form{
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
+        gap: 20px;
+        width: 70%;
+      }
+      .or{
+        display: flex;
+        align-items: center;
+width: 85%;
+      }
+      .or hr{
+        width: 50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page1">
+      <div class="left">
+        <h1>Login to Your Account</h1>
+        <h5>Login Using Social Network</h5><br>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="google fa-brands fa-google-plus"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+        <form action="">
+          <div class="or">
+            <hr>
+              OR
+            </hr>
+          </div>
+       <center><input type="Email "placeholder="Email" size="50"></center><br><br>
+       <div class="Password">
+      <center><input type="Password" placeholder="Password "  size="50" ></center><br>
+       </div>
+         <center><button class="signin">sign in</button></center>
+        </form>
+      </div>
+      <div class="right"> 
+        <h2>New Here?</h2>
+        <br>
+        <p> sign up and discover a great</p><br>
+        <p>amount of new opportunities</p><br>
+        <br>
+       <button >sign up</button>
+      </div>
+    </div>
+  </body>
+</html>
