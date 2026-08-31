@@ -2,120 +2,177 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- IMPORTANT FOR MOBILE RESPONSIVENESS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>K.U. Balaji | Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Damion&family=Molle:ital@1&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
     ></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+
     <style>
+    
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      h1 {
+        font-family: "Damion", cursive;
+      }
+
+    
 
       header {
+        width: 100%;
+        min-height: 70px;
         color: black;
         background-color: white;
+
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+
+        padding: 10px 5%;
+
         position: sticky;
         top: 0;
+        z-index: 1000;
+
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       }
 
-      .page {
-        height: 100vh;
-        border-bottom: 4px solid black;
+      header h1 {
+        margin: 0;
+        font-size: 40px;
       }
 
       header a {
         text-decoration: none;
         color: black;
+        font-weight: 500;
+      }
+
+      header a:hover {
+        color: green;
       }
 
       nav {
         display: flex;
         gap: 30px;
+        align-items: center;
       }
+
+ 
 
       .page1 {
-        height: 100vh;
+        min-height: calc(100vh - 70px);
         width: 100%;
-      }
 
-      .page2 {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        flex-direction: column;
-        gap: 30px;
+        justify-content: space-around;
+
+        padding: 60px 8%;
+        gap: 50px;
+
+        border-bottom: 4px solid black;
       }
 
-      .whats {
-        color: rgb(18, 109, 0);
-        font-size: 80px;
-        position: fixed;
-        bottom: 10px;
-        left: 30px;
-      }
-
-      .page1 p {
-        width: 70%;
+      .home-content {
+        flex: 1;
+        max-width: 650px;
       }
 
       .page1 h1 {
-        font-size: 80px;
+        font-size: clamp(50px, 8vw, 90px);
+        margin-bottom: 10px;
       }
 
-      .bio {
-        text-align: justify;
+      .page1 h3 {
+        font-size: clamp(22px, 3vw, 32px);
+        margin-bottom: 25px;
       }
 
-      .course_heading {
+      .page1 p {
+        width: 100%;
+        max-width: 650px;
+        line-height: 1.7;
+        font-size: 18px;
+      }
+
+      .profile-image {
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      
+
+      .whats {
+        color: rgb(18, 109, 0);
+        font-size: 65px;
+
+        position: fixed;
+        bottom: 20px;
+        left: 25px;
+
+        z-index: 2000;
+      }
+
+
+      .skillsPage {
+        min-height: 100vh;
+        padding: 70px 5%;
+
+        background: #0dcaf0;
         text-align: center;
       }
-      h1 {
-        font-family: "Damion", cursive;
-      }
-      .page3 {
-        height: 80vh;
-        display:;
-      }
-      .page3 h1 {
-        color: black;
-      }
 
-      .skillspage {
-        max-width: 1000px;
-        margin: auto;
-        background: #fff;
-        padding: 40px;
-        color: #111827;
-      }
-
-      h1 {
-        font-size: 42px;
-        margin-bottom: 30px;
+      .skillsPage > h1 {
+        font-size: clamp(40px, 6vw, 60px);
+        margin-bottom: 50px;
       }
 
       .section {
@@ -123,7 +180,7 @@
       }
 
       .section h2 {
-        font-size: 30px;
+        font-size: clamp(25px, 4vw, 32px);
         font-weight: 600;
         margin-bottom: 20px;
       }
@@ -131,54 +188,150 @@
       .skills {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 16px;
       }
 
       .skill {
         background: #020617;
-        color: #fff;
+        color: white;
+
         border-radius: 10px;
+
         padding: 14px 22px;
+
         display: flex;
         align-items: center;
+        justify-content: center;
+
         gap: 12px;
+
         font-size: 18px;
         font-weight: 500;
+
         min-width: 150px;
+
         transition: 0.3s;
       }
 
       .skill:hover {
-        transform: translateY(-3px);
+        transform: translateY(-5px);
         background: #111827;
       }
 
       .skill i {
         font-size: 24px;
       }
-      .vertical-line {
-        position: relative;
-        width: 4px;
-        background: white;
-        height: 720px;
-        margin-right: 30px;
+
+
+      .page2 {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 70px 5%;
+
+        gap: 40px;
       }
+
+      .page2 > h1 {
+        font-size: clamp(40px, 6vw, 60px);
+      }
+
+      .projects-container {
+        width: 100%;
+        max-width: 1200px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 30px;
+      }
+
+      .project-card {
+        width: 100% !important;
+        height: 100%;
+
+        border: none;
+        overflow: hidden;
+
+        transition: 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .project-card .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card .btn {
+        margin-top: auto;
+        width: fit-content;
+      }
+
+        
+
+      .page3 {
+        min-height: 100vh;
+        padding: 70px 5%;
+      }
+
+      .education-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+
+        display: flex;
+        gap: 50px;
+      }
+
+      .education-title {
+        width: 25%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .education-title h1 {
+        font-size: clamp(45px, 6vw, 70px);
+        text-align: center;
+      }
+
       .vertical-line {
         position: relative;
+
         width: 4px;
+        min-width: 4px;
+
         background: white;
-        height: 720px;
-        margin-right: 30px;
+
+        min-height: 600px;
       }
 
       .vertical-line::before,
       .vertical-line::after {
         content: "";
+
         position: absolute;
         left: 50%;
+
         transform: translateX(-50%);
+
         width: 14px;
         height: 14px;
+
         background: white;
         border-radius: 50%;
       }
@@ -190,191 +343,668 @@
       .vertical-line::after {
         bottom: 0;
       }
-    
+
+      .education-details {
+        width: 75%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 45px;
+      }
+
+      .education-item {
+        width: 100%;
+      }
+
+      .education-item h3 {
+        font-size: 22px;
+      }
+
+      .education-item p {
+        line-height: 1.6;
+      }
+
+      .progress {
+        height: 25px;
+        margin-top: 10px;
+      }
+
+     
+
+      @media (max-width: 992px) {
+
+        header {
+          padding: 10px 4%;
+        }
+
+        nav {
+          gap: 18px;
+        }
+
+        .page1 {
+          padding: 50px 5%;
+        }
+
+        .profile-image {
+          width: 260px;
+          height: 260px;
+        }
+
+        .projects-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .education-container {
+          gap: 30px;
+        }
+
+      }
+
+     
+
+      @media (max-width: 768px) {
+
+        /* HEADER */
+
+        header {
+          flex-direction: column;
+          gap: 10px;
+
+          padding: 12px 15px;
+        }
+
+        header h1 {
+          font-size: 35px;
+        }
+
+        nav {
+          width: 100%;
+
+          justify-content: center;
+
+          gap: 15px;
+
+          flex-wrap: wrap;
+        }
+
+        nav a {
+          font-size: 14px;
+        }
+
+        /* HOME */
+
+        .page1 {
+          min-height: auto;
+
+          flex-direction: column;
+
+          text-align: center;
+
+          padding: 60px 20px;
+
+          gap: 35px;
+        }
+
+        .home-content {
+          width: 100%;
+        }
+
+        .page1 h1 {
+          font-size: 60px;
+        }
+
+        .page1 h3 {
+          font-size: 24px;
+        }
+
+        .page1 p {
+          font-size: 16px;
+          text-align: justify;
+        }
+
+        .profile-image {
+          width: 220px;
+          height: 220px;
+        }
+
+        /* WHATSAPP */
+
+        .whats {
+          font-size: 50px;
+          bottom: 15px;
+          left: 15px;
+        }
+
+        /* SKILLS */
+
+        .skillsPage {
+          padding: 60px 20px;
+        }
+
+        .skillsPage > h1 {
+          margin-bottom: 40px;
+        }
+
+        .skills {
+          gap: 12px;
+        }
+
+        .skill {
+          min-width: 130px;
+          padding: 12px 16px;
+          font-size: 16px;
+        }
+
+        /* PROJECTS */
+
+        .page2 {
+          padding: 60px 20px;
+        }
+
+        .projects-container {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .project-card img {
+          height: 220px;
+        }
+
+        /* EDUCATION */
+
+        .page3 {
+          padding: 60px 20px;
+        }
+
+        .education-container {
+          flex-direction: column;
+
+          gap: 30px;
+        }
+
+        .education-title {
+          width: 100%;
+        }
+
+        .education-title h1 {
+          font-size: 55px;
+        }
+
+        /* Hide vertical timeline on mobile */
+
+        .vertical-line {
+          display: none;
+        }
+
+        .education-details {
+          width: 100%;
+          gap: 35px;
+        }
+
+        .education-item {
+          background: rgba(255, 255, 255, 0.1);
+
+          padding: 20px;
+
+          border-radius: 10px;
+        }
+
+        .education-item h3 {
+          font-size: 20px;
+        }
+
+        .education-item p {
+          font-size: 15px;
+        }
+
+        .progress {
+          width: 100% !important;
+        }
+      }
+
+   
+
+      @media (max-width: 480px) {
+
+        header h1 {
+          font-size: 30px;
+        }
+
+        nav {
+          gap: 10px;
+        }
+
+        nav a {
+          font-size: 13px;
+        }
+
+        .page1 h1 {
+          font-size: 50px;
+        }
+
+        .page1 h3 {
+          font-size: 20px;
+        }
+
+        .page1 p {
+          font-size: 15px;
+        }
+
+        .profile-image {
+          width: 180px;
+          height: 180px;
+        }
+
+        .skill {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .project-card img {
+          height: 200px;
+        }
+
+        .education-title h1 {
+          font-size: 45px;
+        }
+      }
     </style>
   </head>
 
   <body>
+
+   
+
     <header>
       <h1>portfolio</h1>
+
       <nav>
         <a href="#homePage">Home</a>
-        <a href="#ProjectsPage">Contact</a>
-        <a href="#educationPage">education</a>
-        <a href="#skillspage">skills</a>
+        <a href="#ProjectsPage">Projects</a>
+        <a href="#educationPage">Education</a>
+        <a href="#skillspage">Skills</a>
       </nav>
     </header>
+
+
+    
+
     <i class="whats fa-brands fa-whatsapp"></i>
 
-    <div
+
+   
+
+    <section
       id="homePage"
-      class="page1 page vh-100 bg-success text-light d-flex justify-content-around"
+      class="page1 bg-success text-light"
     >
-      <div class="d-flex align-items-center flex-column justify-content-center">
+
+      <div class="home-content">
+
         <h1>K.U.BALAJI</h1>
-        <h3>Cyber crime security</h3>
-        <p class="bio">
-          A passionate & dedicated professional having bachelor's degree,willing
-          to start my career in the challenging field of software engineering i
-          would like to implement my innovative ideas,skills and creativity for
-          acomplishing the projects
+
+        <h3>Cyber Crime Security</h3>
+
+        <p>
+          A passionate & dedicated professional having bachelor's degree,
+          willing to start my career in the challenging field of software
+          engineering. I would like to implement my innovative ideas,
+          skills and creativity for accomplishing projects.
         </p>
+
       </div>
-      <img src="my image.jpeg" >
-    </div>
 
-    <!-- page 2 -->
+      <img
+        src="images/my image.jpeg"
+        alt="K.U. Balaji"
+        class="profile-image"
+      />
 
-    <div
+    </section>
+
+
+
+    <section
       id="skillspage"
-      class="skillsPage vh-100 bg-info justify-content-center text-center"
+      class="skillsPage"
     >
+
       <h1>Skills</h1>
 
+      <!-- FRONTEND -->
+
       <div class="section">
+
         <h2>Frontend</h2>
 
-        <div class="skills justify-content-center">
-          <div class="skill"><i class="fa-brands fa-css3-alt"></i>CSS</div>
-          <div class="skill"><i class="fa-brands fa-html5"></i>HTML</div>
-          <div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
-          <div class="skill"><i class="fa-brands fa-react"></i>React</div>
-        </div>
-      </div>
-      <div class="section">
-        <h2>backend</h2>
+        <div class="skills">
 
-        <div class="skills justify-content-center">
-          <div class="skill"><i class="fa-brands fa-nodejs"></i>Nodejs</div>
-          <div class="skill"><i class="fa-brands fa-py"></i>python</div>
+          <div class="skill">
+            <i class="fa-brands fa-css3-alt"></i>
+            CSS
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-html5"></i>
+            HTML
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-js"></i>
+            JavaScript
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-react"></i>
+            React
+          </div>
+
         </div>
+
       </div>
+
+
+      <!-- BACKEND -->
+
       <div class="section">
+
+        <h2>Backend</h2>
+
+        <div class="skills">
+
+          <div class="skill">
+            <i class="fa-brands fa-node-js"></i>
+            Node.js
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-python"></i>
+            Python
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="section">
+
         <h2>Languages</h2>
 
-        <div class="skills justify-content-center">
-          <div class="skill"><i class="fa-brands fa-css3-alt"></i>CSS</div>
-          <div class="skill"><i class="fa-brands fa-html5"></i>HTML</div>
-          <div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
-        </div>
-      </div>
-    </div>
+        <div class="skills">
 
-    <div id="ProjectsPage" class="page2 page vh-100 bg-info-subtle">
-      <h1 class="text-center">Projects</h1>
-      <div class="d-flex justify-content-around">
-        <div class="card bg-secondary" style="width: 18%">
-          <img src="weather.png" class="card-img-top h-50" alt="" />
+          <div class="skill">
+            <i class="fa-brands fa-html5"></i>
+            HTML
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-css3-alt"></i>
+            CSS
+          </div>
+
+          <div class="skill">
+            <i class="fa-brands fa-js"></i>
+            JavaScript
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <section
+      id="ProjectsPage"
+      class="page2 bg-info-subtle"
+    >
+
+      <h1>Projects</h1>
+
+      <div class="projects-container">
+
+
+
+        <div class="card project-card bg-secondary">
+
+          <img
+            src="images/weather.png"
+            class="card-img-top"
+            alt="Weather dashboard"
+          />
 
           <div class="card-body">
-            <h5 class="card-title">nan mudhalvan project</h5>
-            <p class="card-text">live weather dashboard</p>
-            <a href="#" class="btn btn-primary">no more</a>
-          </div>
-        </div>
-        <div class="card bg-secondary" style="width: 18%">
-          <img src="image2.jpeg" class="card-img-top h-50" alt="" />
-          <div class="card-body">
-            <h5 class="card-title">certificate</h5>
+
+            <h5 class="card-title">
+              Nan Mudhalvan Project
+            </h5>
+
             <p class="card-text">
-              NPTL online certificate for introduction to internet of things
+              Live weather dashboard.
             </p>
-            <a href="#" class="btn btn-primary">no more</a>
+
+            <a href="#" class="btn btn-primary">
+              No more
+            </a>
+
           </div>
+
         </div>
-        <div class="card bg-secondary" style="width: 18%">
-          <img src="image1.jpeg" class="card-img-top h-30" alt="" />
+
+
+
+        <div class="card project-card bg-secondary">
+
+          <img
+            src="images/image2.jpeg"
+            class="card-img-top"
+            alt="NPTEL certificate"
+          />
+
           <div class="card-body">
-            <h5 class="card-title">certificate</h5>
+
+            <h5 class="card-title">
+              Certificate
+            </h5>
+
             <p class="card-text">
-              2-weeks mern stack internship in shristi innovative educational
-              service
+              NPTEL online certificate for Introduction
+              to Internet of Things.
             </p>
-            <a href="#" class="btn btn-primary">no more</a>
+
+            <a href="#" class="btn btn-primary">
+              No more
+            </a>
+
           </div>
+
         </div>
+
+
+      
+
+        <div class="card project-card bg-secondary">
+
+          <img
+            src="images/image1.jpeg"
+            class="card-img-top"
+            alt="MERN stack internship certificate"
+          />
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+              Certificate
+            </h5>
+
+            <p class="card-text">
+              2-weeks MERN stack internship in
+              Shristi Innovative Educational Service.
+            </p>
+
+            <a href="#" class="btn btn-primary">
+              No more
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
-    </div>
-    <div id="educationPage" class="page3 bg-success text-light">
-      <div class="w-100 h-75 d-flex gap-5">
-        <div class="w-25 h-100 d-flex justify-content-center align-items-center">
-          <h1 class="course_heading mt-3">Education</h1>
+
+    </section>
+
+
+ 
+
+    <section
+      id="educationPage"
+      class="page3 bg-success text-light"
+    >
+
+      <div class="education-container">
+
+      
+
+        <div class="education-title">
+
+          <h1>Education</h1>
+
         </div>
+
+
+
         <div class="vertical-line"></div>
-        <div
-          class="w-75 h-100 d-flex flex-column justify-content-center align-items-center gap-5"
-        >
-          <!-- course UG -->
-          <div class="w-100">
-            <div class="course_details">
-              <h3 class="mb-0">Course details: secondary</h3>
-              <p class="mb-0">school name: ST.Teresa Metric Hr Sec School</p>
-              <p class="mb-0">year of pass-out: 2021</p>
-            </div>
-            <div class="progress w-75">
-              <div
-                class="progress-bar w-100"
-                role="progressbar"
-                style="width: 100%"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                100%
-              </div>
-            </div>
-          </div>
 
-          <!-- course +2 -->
-          <div class="w-100">
+
+        
+
+        <div class="education-details">
+
+
+
+          <div class="education-item">
+
             <div class="course_details">
-              <h3 class="mb-0">
-                Course details : Higher Secondary(Computer science)
+
+              <h3>
+                Course Details: Secondary
               </h3>
-              <p class="mb-0">school name: ST.Teresa Metric Hr Sec School</p>
-              <p class="mb-0">year of pass-out: 2023</p>
+
+              <p>
+                School Name: ST. Teresa Metric Hr Sec School
+              </p>
+
+              <p>
+                Year of Pass-out: 2021
+              </p>
+
             </div>
-            <div class="progress w-75">
+
+            <div class="progress">
+
               <div
                 class="progress-bar w-100"
                 role="progressbar"
-                style="width: 100%"
                 aria-valuenow="100"
                 aria-valuemin="0"
                 aria-valuemax="100"
               >
                 100%
               </div>
+
             </div>
+
           </div>
-          <!-- course 10th -->
-          <div class="w-100">
+
+
+        
+
+          <div class="education-item">
+
             <div class="course_details">
-              <h3 class="mb-0">
-                Course details: computer science and engineering(B.E)
+
+              <h3>
+                Course Details: Higher Secondary
+                (Computer Science)
               </h3>
-              <p class="mb-0">
-                College name: amirtha college of engineering and technology
+
+              <p>
+                School Name: ST. Teresa Metric Hr Sec School
               </p>
-              <p class="mb-0">
-                year of pass-out: Final-year Student(expected graduation:2027)
+
+              <p>
+                Year of Pass-out: 2023
               </p>
+
             </div>
-            <div class="progress w-75">
+
+            <div class="progress">
+
+              <div
+                class="progress-bar w-100"
+                role="progressbar"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                100%
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="education-item">
+
+            <div class="course_details">
+
+              <h3>
+                Computer Science and Engineering (B.E)
+              </h3>
+
+              <p>
+                College Name: Amirtha College of Engineering
+                and Technology
+              </p>
+
+              <p>
+                Year of Pass-out: Final-year Student
+                (Expected Graduation: 2027)
+              </p>
+
+            </div>
+
+            <div class="progress">
+
               <div
                 class="progress-bar w-75 bg-danger"
                 role="progressbar"
-                style="width: 75%"
-                aria-valuenow="100"
+                aria-valuenow="75"
                 aria-valuemin="0"
                 aria-valuemax="100"
               >
                 75%
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
-    </div>
+
+    </section>
+
   </body>
 </html>
